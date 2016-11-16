@@ -2,7 +2,7 @@ package com.bicou.play.json
 
 import play.api.libs.json._
 
-object JsonOptionOption {
+object OptionOption {
 
   def reads[A](path: JsPath)(implicit reads: Reads[A]): Reads[Option[Option[A]]] =
     Reads[Option[Option[A]]] { json =>

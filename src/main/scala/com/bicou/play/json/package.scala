@@ -1,17 +1,16 @@
-package com.bicou.play
+package com.bicou.play.json
 
-import _root_.play.api.libs.json._
+import play.api.libs.json._
 
-package object json {
+package object optionoption {
 
-  implicit class OptionOption(path: JsPath) {
+  implicit class PlayJsonOptionOption(path: JsPath) {
 
-    def readOptionOption[A](implicit r: Reads[A]): Reads[Option[Option[A]]] = JsonOptionOption.reads[A](path)(r)
+    def readOptionOption[A](implicit r: Reads[A]): Reads[Option[Option[A]]] = OptionOption.reads[A](path)(r)
 
-    def writeOptionOption[A](implicit w: Writes[A]): OWrites[Option[Option[A]]] = JsonOptionOption.writes[A](path)(w)
+    def writeOptionOption[A](implicit w: Writes[A]): OWrites[Option[Option[A]]] = OptionOption.writes[A](path)(w)
 
-    def formatOptionOption[A](implicit f: Format[A]): OFormat[Option[Option[A]]] = JsonOptionOption.format[A](path)(f)
+    def formatOptionOption[A](implicit f: Format[A]): OFormat[Option[Option[A]]] = OptionOption.format[A](path)(f)
 
   }
 }
-

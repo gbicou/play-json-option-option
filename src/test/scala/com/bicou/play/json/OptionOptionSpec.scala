@@ -7,7 +7,9 @@ import play.api.libs.functional.syntax._
 
 case class A(id: Option[Option[Int]], name: Option[Option[String]])
 
-class JsonOptionOptionSpec extends WordSpec with Matchers {
+class OptionOptionSpec extends WordSpec with Matchers {
+
+  import optionoption._
 
   "readOptionOption" should {
 
