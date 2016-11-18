@@ -10,5 +10,7 @@ libraryDependencies ++= Seq(
   "org.scalatest" %% "scalatest" % "3.0.0" % "test"
 )
 
+publishMavenStyle := true
+
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 
